@@ -29,19 +29,23 @@ Also, the labs currently only support VMWare provider for Vagrant. I do plan to 
 
 Due to the limitations of Vagrant with Windows and VMWare, you need to make sure you are modifying the IP addresses of machines to match the NAT (vmnet8) subnet of VMWare. You have two options here:
 
-Option 1: **Modify the NAT subnet itself**
+**Option 1: Modify the NAT subnet itself**
 
 - Go to VMWare -> Edit -> Virtual Network Editor
 - Click on "Change Settings"
 - Select NAT network. It generally is VMnet8.
 - Modify the Subnet IP to  `192.168.10.0`
-![VMNAT](.\images\vmnat.jpg)
+
+![VMNAT](images/vmnat.jpg)
+
 - Click on "NAT Settings"
 - Modify the Gateway IP to `192.168.10.2`
-![VMNAT-2](.\images\vmnat-2.jpg)
+
+![VMNAT-2](images/vmnat-2.jpg)
+
 - Save the changes
 
-Option 2: **Modify the IP addresses in `config.json`**
+**Option 2: Modify the IP addresses in `config.json`**
 
 If you cannot modify the NAT subnet for any reason, open the `config.json` file and modify the IP addresses of all the machines to match the NAT subnet.
 
@@ -59,7 +63,7 @@ I wanted to honestly. But Ansible doesn't love Windows hosts and I do. It wasn't
 
 To customize the labs, like Domain name or Administrator password, modify the `config.json` file.
 
-***Full Disclosure**: `setup.ps1` would modify the TrustedHosts of WinRM while running to remotely manage the VMs. It would, however, restore it back to the original state after it's done. This is why it need elevated access.*
+***Full Disclosure**: `setup.ps1` would modify the TrustedHosts of WinRM while running to remotely manage the VMs. It would, however, restore it back to the original state after it's done. This is why it needs elevated access.*
 
 ## Thanks to
 
