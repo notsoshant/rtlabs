@@ -1,0 +1,49 @@
+{
+    "provider": "vmware_desktop",
+    "domain": "rtlabs.local",
+    "adminpass": "Admin@12345",
+    "boxes": {
+        "dc": {
+            "box": "StefanScherer/windows_2019",
+            "cpus": 2,
+            "memory": 4096,
+            "ip": "192.168.10.10",
+            "hostname": "DC01",
+            "user": "vagrant",
+            "pass": "vagrant"
+        },
+        "srv01": {
+            "box": "StefanScherer/windows_2016",
+            "cpus": 2,
+            "memory": 2048,
+            "ip": "192.168.10.11",
+            "hostname": "SRV01",
+            "user": "vagrant",
+            "pass": "vagrant"
+        },
+        "srv02": {
+            "box": "StefanScherer/windows_2016",
+            "cpus": 2,
+            "memory": 4096,
+            "ip": "192.168.10.12",
+            "hostname": "SRV02",
+            "user": "vagrant",
+            "pass": "vagrant"
+        },
+        "wkt01": {
+            "box": "StefanScherer/windows_10",
+            "cpus": 2,
+            "memory": 4096,
+            "ip": "192.168.10.51",
+            "hostname": "WKT01",
+            "user": "vagrant",
+            "pass": "vagrant"
+        },
+        "kali": {
+            "box": "kalilinux/rolling",
+            "cpus": 2,
+            "memory": 8192,
+            "ip": "192.168.10.101"
+        }
+    }
+}
