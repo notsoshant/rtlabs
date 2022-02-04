@@ -3,7 +3,7 @@ Import-Module .\Scripts\attacks.psm1 -Force
 
 $config = Get-Content ".\config.json" -Raw | ConvertFrom-Json
 $oldTrustedHosts = (Get-Item WSMan:\localhost\Client\TrustedHosts).Value
-$natdevice = "vmnet8"
+$natdevice = $config.natdevice
 
 $vmnetip = (Get-NetIPAddress -InterfaceAlias "*$natdevice*" -AddressFamily IPv4).IPAddress.Split(".")[0..2]
 $vmwaresubnet = $vmnetip -join "."

@@ -1,5 +1,6 @@
 {
     "provider": "vmware_desktop",
+    "natdevice": "vmnet8",
     "domain": "rtlabs.local",
     "adminpass": "Admin@12345",
     "boxes": {
