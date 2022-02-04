@@ -1,5 +1,6 @@
 {
     "provider": "vmware_desktop",
+    "natdevice": "vmnet8",
     "domain": "rtlabs.local",
     "adminpass": "Admin@12345",
     "boxes": {
@@ -10,7 +11,8 @@
             "ip": "192.168.10.10",
             "hostname": "DC01",
             "user": "vagrant",
-            "pass": "vagrant"
+            "pass": "vagrant",
+            "module": ".\\Scripts\\Machines\\dc.psm1"
         },
         "srv01": {
             "box": "StefanScherer/windows_2016",
@@ -19,7 +21,8 @@
             "ip": "192.168.10.11",
             "hostname": "SRV01",
             "user": "vagrant",
-            "pass": "vagrant"
+            "pass": "vagrant",
+            "module": ".\\Scripts\\Machines\\srv01.psm1"
         },
         "srv02": {
             "box": "StefanScherer/windows_2016",
@@ -28,7 +31,8 @@
             "ip": "192.168.10.12",
             "hostname": "SRV02",
             "user": "vagrant",
-            "pass": "vagrant"
+            "pass": "vagrant",
+            "module": ".\\Scripts\\Machines\\srv02.psm1"
         },
         "wkt01": {
             "box": "StefanScherer/windows_10",
@@ -37,7 +41,8 @@
             "ip": "192.168.10.51",
             "hostname": "WKT01",
             "user": "vagrant",
-            "pass": "vagrant"
+            "pass": "vagrant",
+            "module": ".\\Scripts\\Machines\\wkt01.psm1"
         },
         "kali": {
             "box": "kalilinux/rolling",
@@ -45,5 +50,6 @@
             "memory": 8192,
             "ip": "192.168.10.101"
         }
-    }
+    },
+    "attacks": {}
 }
